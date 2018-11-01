@@ -19,7 +19,7 @@
     "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "build": "rimraf dist && mkdir dist && yarn build-browser && yarn build-node && touch test.md",
+    "build": "rimraf dist && mkdir dist && yarn build-browser && yarn build-node && rm README.md",
     "build-browser": "webpack --json --output-library-target window > dist/stats-browser.json",
     "build-node": "webpack --json --output-library-target commonjs2 > dist/stats-node.json",
     "dev-server": "webpack-dev-server --hot"
